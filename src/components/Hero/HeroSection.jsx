@@ -386,7 +386,6 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
           className="px-2"
-          
         >
           <h2 className="font-script text-[2rem] sm:text-[2.75rem] md:text-[3.25rem] gold-shimmer leading-relaxed">
             {couple.bride.name}
@@ -420,7 +419,6 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.9 }}
           className="px-2"
-          
         >
           <h2 className="font-script text-[2rem] sm:text-[2.75rem] md:text-[3.25rem] gold-shimmer leading-relaxed">
             {couple.groom.name}
@@ -475,7 +473,7 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 3.2 }}
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6"
-          style={{ marginTop: "2rem", padding:'20px' }}
+          style={{ marginTop: "2rem", padding: "20px" }}
         >
           {[
             { label: "Bride's Family", family: couple.brideFamily },

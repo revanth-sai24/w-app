@@ -41,7 +41,13 @@ export default class ErrorBoundary extends Component {
           >
             Revanth & Ujwala
           </p>
-          <p style={{ fontSize: "0.875rem", opacity: 0.7, marginBottom: "1.5rem" }}>
+          <p
+            style={{
+              fontSize: "0.875rem",
+              opacity: 0.7,
+              marginBottom: "1.5rem",
+            }}
+          >
             Something went wrong loading the invitation.
           </p>
           <button
