@@ -58,9 +58,9 @@ export default function HeroSection() {
         }}
       />
 
-      {/* ══ Rotating Mandala Pattern — very subtle ══ */}
+      {/* ══ Rotating Mandala Pattern — very subtle, hidden on mobile ══ */}
       <div
-        className="absolute pointer-events-none mandala-spin"
+        className="absolute pointer-events-none mandala-spin hidden sm:block"
         style={{
           top: "50%",
           left: "50%",
@@ -143,12 +143,6 @@ export default function HeroSection() {
           { x: "75%", y: "25%", d: "4.5s", del: "2s", s: 2 },
           { x: "8%", y: "55%", d: "3s", del: "3s", s: 1.5 },
           { x: "92%", y: "50%", d: "3.5s", del: "0.5s", s: 2 },
-          { x: "35%", y: "8%", d: "4s", del: "1s", s: 1.5 },
-          { x: "65%", y: "85%", d: "3s", del: "2.5s", s: 2 },
-          { x: "18%", y: "78%", d: "5s", del: "1.2s", s: 1.5 },
-          { x: "82%", y: "72%", d: "4s", del: "3.5s", s: 2 },
-          { x: "50%", y: "5%", d: "3.5s", del: "0.3s", s: 2.5 },
-          { x: "45%", y: "92%", d: "4.5s", del: "2.3s", s: 1.5 },
         ].map((star, i) => (
           <div
             key={i}
@@ -174,21 +168,11 @@ export default function HeroSection() {
           className="w-[88%] sm:w-[72%] md:w-[58%] lg:w-[46%] max-w-[540px] h-auto"
           fill="none"
         >
-          <defs>
-            <filter id="archGlow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="4" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
           {/* Outer glow arch */}
           <path
             d="M60,680 L60,260 Q60,60 250,60 Q440,60 440,260 L440,680"
             stroke="rgba(212,175,55,0.18)"
             strokeWidth="2"
-            filter="url(#archGlow)"
           />
           <path
             d="M80,680 L80,268 Q80,85 250,85 Q420,85 420,268 L420,680"
