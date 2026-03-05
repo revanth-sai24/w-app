@@ -30,11 +30,11 @@ function App() {
       {/* Curtain — covers everything until user opens */}
       {!curtainOpen && <CurtainReveal onOpen={() => setCurtainOpen(true)} />}
 
-      {/* Decorative particles — only after curtain opens to save perf */}
-      {curtainOpen && (
+      {/* Decorative particles — only after curtain opens, skip on mobile for perf */}
+      {curtainOpen && !isMobile && (
         <>
-          <FloatingPetals count={isMobile ? 6 : 14} />
-          <GoldParticles count={isMobile ? 8 : 18} />
+          <FloatingPetals count={14} />
+          <GoldParticles count={18} />
           <StageCurtains />
         </>
       )}

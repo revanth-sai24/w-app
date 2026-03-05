@@ -811,21 +811,6 @@ body {
   }
 }
 
-/* ═══ Mandala Rotate ═══ */
-
-@keyframes mandalaRotate {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-.mandala-spin {
-  animation: mandalaRotate 120s linear infinite;
-}
-
 /* ═══ Breathing ambient glow ═══ */
 
 @keyframes breatheGlow {
@@ -844,14 +829,16 @@ body {
   animation: breatheGlow 5s ease-in-out infinite;
 }
 
-/* ═══ Mobile performance: reduce heavy animations ═══ */
+/* ═══ Mobile performance: disable heavy animations & effects ═══ */
 
 @media (max-width: 640px) {
+  /* Disable breathing glow */
   .breathe-glow {
     animation: none;
     opacity: 0.45;
   }
 
+  /* Disable photo frame glow pulse */
   .glow-pulse {
     animation: none;
     box-shadow:
@@ -859,8 +846,127 @@ body {
       0 0 8px rgba(142, 56, 85, 0.1);
   }
 
-  .mandala-spin {
+  /* Disable gold shimmer animation — keep static gold color */
+  .gold-shimmer {
+    animation: none;
+    background-position: 50% center;
+    filter: none;
+  }
+
+  /* Disable rose gold shimmer */
+  .rose-gold-shimmer {
+    animation: none;
+    background-position: 50% center;
+    filter: none;
+  }
+
+  /* Disable heartbeat pulse */
+  .heartbeat {
+    animation: none;
+  }
+
+  /* Disable float */
+  .float-gentle {
+    animation: none;
+  }
+
+  /* Disable romantic glow */
+  .romantic-glow {
+    animation: none;
+  }
+
+  /* Disable sparkle */
+  .sparkle {
+    animation: none;
+    opacity: 0.6;
+  }
+
+  /* Disable countdown pulse — keep static box-shadow */
+  .countdown-box {
+    animation: none;
+  }
+
+  /* Disable event card sweep animation */
+  .event-card::after {
+    animation: none;
     display: none;
+  }
+
+  /* Disable family card border rotation */
+  .family-card::before {
+    animation: none;
+    background-size: 100% 100%;
+  }
+
+  /* Disable rope knot rotation */
+  .rope-knot {
+    animation: none;
+  }
+
+  /* Remove backdrop-filter — very expensive on mobile GPU */
+  .glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(16, 12, 18, 0.92);
+  }
+
+  /* Disable twinkle on stars — they're still visible, just static */
+  .petal,
+  .particle {
+    display: none;
+  }
+
+  /* Promote sections to GPU layers for smooth scrolling */
+  section {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  /* Reduce photo frame pseudo-element complexity */
+  .photo-frame-gold::after {
+    display: none;
+  }
+
+  /* Simplify photo frame conic-gradient to simple border */
+  .photo-frame-gold::before {
+    background: linear-gradient(
+      135deg,
+      rgba(212, 175, 55, 0.7),
+      rgba(142, 56, 85, 0.35)
+    );
+  }
+
+  /* Simplify event card box-shadow — less layers */
+  .event-card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .event-card:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Simplify countdown box-shadow */
+  .countdown-box {
+    box-shadow:
+      0 2px 15px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(212, 175, 55, 0.1);
+  }
+
+  /* Simplify family card box-shadow */
+  .family-card {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Remove section-ornate pseudo-element overlay */
+  .section-ornate::before {
+    display: none;
+  }
+
+  /* Disable hover transforms on mobile (no hover on touch) */
+  .family-card:hover,
+  .info-row:hover {
+    transform: none;
   }
 }
 

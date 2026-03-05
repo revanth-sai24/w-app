@@ -6,6 +6,7 @@ import EventCard from "./EventCard";
 import { FloralCorner, OrnamentDivider } from "../Decorations/FloralElements";
 
 const eventKeys = ["engagement", "marriage", "reception"];
+const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
 
 export default function EventsSection() {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.05 });
@@ -28,65 +29,75 @@ export default function EventsSection() {
         style={{ height: "1px" }}
       />
 
-      {/* Ambient romantic glow — more dramatic */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: `
-          radial-gradient(ellipse at 50% 15%, rgba(212,175,55,0.05) 0%, transparent 45%),
-          radial-gradient(ellipse at 30% 70%, rgba(142,56,85,0.03) 0%, transparent 35%),
-          radial-gradient(ellipse at 70% 70%, rgba(142,56,85,0.03) 0%, transparent 35%),
-          radial-gradient(circle at 50% 50%, rgba(212,175,55,0.025) 0%, transparent 40%)
-        `,
-        }}
-      />
+      {/* Ambient romantic glow — desktop only */}
+      {!isMobile && (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: `
+            radial-gradient(ellipse at 50% 15%, rgba(212,175,55,0.05) 0%, transparent 45%),
+            radial-gradient(ellipse at 30% 70%, rgba(142,56,85,0.03) 0%, transparent 35%),
+            radial-gradient(ellipse at 70% 70%, rgba(142,56,85,0.03) 0%, transparent 35%),
+            radial-gradient(circle at 50% 50%, rgba(212,175,55,0.025) 0%, transparent 40%)
+          `,
+          }}
+        />
+      )}
 
-      {/* Breathing center glow */}
-      <div
-        className="absolute inset-0 pointer-events-none breathe-glow"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 50%, rgba(212,175,55,0.03) 0%, transparent 45%)",
-        }}
-      />
+      {/* Breathing center glow — desktop only */}
+      {!isMobile && (
+        <div
+          className="absolute inset-0 pointer-events-none breathe-glow"
+          style={{
+            background:
+              "radial-gradient(circle at 50% 50%, rgba(212,175,55,0.03) 0%, transparent 45%)",
+          }}
+        />
+      )}
 
-      {/* Twinkling stars for events section */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[
-          { x: "5%", y: "20%", d: "4s", del: "0s", s: 1.5 },
-          { x: "95%", y: "30%", d: "3.5s", del: "1s", s: 2 },
-          { x: "15%", y: "60%", d: "3s", del: "2s", s: 1.5 },
-          { x: "85%", y: "70%", d: "4s", del: "0.5s", s: 2 },
-          { x: "50%", y: "10%", d: "5s", del: "1.5s", s: 2 },
-          { x: "30%", y: "90%", d: "3.5s", del: "3s", s: 1.5 },
-        ].map((star, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              left: star.x,
-              top: star.y,
-              width: `${star.s}px`,
-              height: `${star.s}px`,
-              background:
-                "radial-gradient(circle, rgba(212,175,55,0.9), rgba(212,175,55,0.3), transparent)",
-              animation: `twinkle ${star.d} ease-in-out ${star.del} infinite`,
-              boxShadow: "0 0 6px rgba(212,175,55,0.2)",
-            }}
+      {/* Twinkling stars for events section — hidden on mobile for perf */}
+      {!isMobile && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[
+            { x: "5%", y: "20%", d: "4s", del: "0s", s: 1.5 },
+            { x: "95%", y: "30%", d: "3.5s", del: "1s", s: 2 },
+            { x: "15%", y: "60%", d: "3s", del: "2s", s: 1.5 },
+            { x: "85%", y: "70%", d: "4s", del: "0.5s", s: 2 },
+            { x: "50%", y: "10%", d: "5s", del: "1.5s", s: 2 },
+            { x: "30%", y: "90%", d: "3.5s", del: "3s", s: 1.5 },
+          ].map((star, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full"
+              style={{
+                left: star.x,
+                top: star.y,
+                width: `${star.s}px`,
+                height: `${star.s}px`,
+                background:
+                  "radial-gradient(circle, rgba(212,175,55,0.9), rgba(212,175,55,0.3), transparent)",
+                animation: `twinkle ${star.d} ease-in-out ${star.del} infinite`,
+                boxShadow: "0 0 6px rgba(212,175,55,0.2)",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Floral corners — hidden on mobile for perf */}
+      {!isMobile && (
+        <>
+          <FloralCorner
+            className="absolute top-4 right-0 pointer-events-none opacity-25"
+            size={85}
+            flip
           />
-        ))}
-      </div>
-
-      {/* Floral corners */}
-      <FloralCorner
-        className="absolute top-4 right-0 pointer-events-none opacity-25"
-        size={85}
-        flip
-      />
-      <FloralCorner
-        className="absolute bottom-4 left-0 pointer-events-none opacity-20 rotate-180 -scale-x-100"
-        size={80}
-      />
+          <FloralCorner
+            className="absolute bottom-4 left-0 pointer-events-none opacity-20 rotate-180 -scale-x-100"
+            size={80}
+          />
+        </>
+      )}
 
       <motion.div
         initial={{ opacity: 0 }}
