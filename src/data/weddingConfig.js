@@ -17,9 +17,9 @@ export const weddingConfig = {
     },
     // Parents — fill in when ready
     brideFamily: {
-      father: "Venkatesh",
+      father: "Vallala Venkatesh",
       fatherTelugu: "వెంకటేష్",
-      mother: "Sharadha",
+      mother: "Vallala Sharadha",
       motherTelugu: "శారద",
       gotram: "Gotram",
       gotramTelugu: "గోత్రం",
@@ -110,9 +110,9 @@ export const weddingConfig = {
       time: "8:00 PM",
       muhurtam: null,
       venue: {
-        name: "VKR Convention Hall",
+        name: "VKR Convention Hall, Kalluru",
         nameTelugu: "",
-        address: "VKR Convention Hall, Telangana",
+        address: "VKR Convention Hall, Kalluru, Telangana",
         mapUrl: "https://maps.app.goo.gl/LbRECjonkrE1KQdx7",
         lat: 17.55,
         lng: 78.6,

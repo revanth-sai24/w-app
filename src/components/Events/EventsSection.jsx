@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
+import { Heart, CheckCircle } from "lucide-react";
 import { weddingConfig } from "../../data/weddingConfig";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 import EventCard from "./EventCard";
@@ -8,8 +8,25 @@ import { FloralCorner, OrnamentDivider } from "../Decorations/FloralElements";
 const eventKeys = ["engagement", "marriage", "reception"];
 const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
 
+/* Split events into completed and upcoming */
+function categorizeEvents() {
+  const now = new Date();
+  const completed = [];
+  const upcoming = [];
+  for (const key of eventKeys) {
+    const eventDate = new Date(weddingConfig.events[key].date);
+    if (eventDate > now) upcoming.push(key);
+    else completed.push(key);
+  }
+  return { completed, upcoming };
+}
+
 export default function EventsSection() {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.05 });
+  const { completed, upcoming } = categorizeEvents();
+
+  // If all events are done, hide the entire section
+  if (upcoming.length === 0 && completed.length === 0) return null;
 
   return (
     <section
@@ -156,9 +173,45 @@ export default function EventsSection() {
           </motion.div>
         </div>
 
-        {/* All Events — stacked with generous spacing */}
+        {/* Completed events — compact mini cards */}
+        {completed.length > 0 && (
+          <div className="mb-8 sm:mb-12">
+            <p className="text-center text-[9px] uppercase tracking-[0.35em] text-gold/40 mb-4 font-medium">
+              Completed
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {completed.map((key) => {
+                const evt = weddingConfig.events[key];
+                return (
+                  <motion.div
+                    key={key}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full"
+                    style={{
+                      background: "var(--theme-card-bg)",
+                      border:
+                        "1px solid rgba(var(--completed-border, 212,175,55), 0.12)",
+                      boxShadow: "0 2px 10px rgba(0,0,0,0.04)",
+                      opacity: 0.7,
+                    }}
+                  >
+                    <span className="text-base">{evt.emoji}</span>
+                    <span className="text-xs font-medium text-cream/60">
+                      {evt.title}
+                    </span>
+                    <CheckCircle className="w-3.5 h-3.5 text-green-500/70" />
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Upcoming Events — full cards */}
         <div className="flex flex-col items-center gap-10 sm:gap-14">
-          {eventKeys.map((key, i) => (
+          {upcoming.map((key, i) => (
             <motion.div
               key={key}
               className="w-full"

@@ -1088,112 +1088,113 @@ body {
 
 html.light {
   /* Override @theme palette — Tailwind utilities auto-update */
-  --color-cream: #2c1810;
-  --color-cream-dark: #3d2418;
-  --color-gold: #8a6b15;
-  --color-gold-light: #a07c18;
-  --color-gold-dark: #5c4810;
+  --color-cream: #006a4e;
+  --color-cream-dark: #005540;
+  --color-gold: #006a4e;
+  --color-gold-light: #008562;
+  --color-gold-dark: #004d38;
   --color-rose-gold: #8a2e48;
   --color-rose: #8a2e48;
   --color-blush: #a04058;
   --color-crimson: #7a1830;
   --color-crimson-light: #943050;
-  --color-dark-bg: #fdf6ec;
+  --color-dark-bg: #ffffff;
   --color-dark-surface: #ffffff;
-  --color-warm: #f8eedb;
+  --color-warm: #f5f5f5;
 
   /* Theme gradient variables */
   --theme-hero-bg:
     radial-gradient(
       ellipse at 30% 20%,
-      rgba(142, 56, 85, 0.06) 0%,
+      rgba(0, 106, 78, 0.04) 0%,
       transparent 40%
     ),
     radial-gradient(
       ellipse at 70% 15%,
-      rgba(212, 175, 55, 0.07) 0%,
+      rgba(0, 106, 78, 0.05) 0%,
       transparent 35%
     ),
     radial-gradient(
       ellipse at 50% 85%,
-      rgba(142, 56, 85, 0.05) 0%,
+      rgba(0, 106, 78, 0.03) 0%,
       transparent 40%
     ),
     linear-gradient(
       175deg,
-      #fdf6ec 0%,
-      #f8eedb 30%,
-      #fdf6ec 50%,
-      #f5e8d0 75%,
-      #fdf6ec 100%
+      #ffffff 0%,
+      #fafafa 30%,
+      #ffffff 50%,
+      #f7f7f5 75%,
+      #ffffff 100%
     );
   --theme-events-bg:
     radial-gradient(
       ellipse at 40% 20%,
-      rgba(212, 175, 55, 0.06) 0%,
+      rgba(0, 106, 78, 0.04) 0%,
       transparent 40%
     ),
     radial-gradient(
       ellipse at 60% 80%,
-      rgba(142, 56, 85, 0.04) 0%,
+      rgba(0, 106, 78, 0.03) 0%,
       transparent 40%
     ),
-    linear-gradient(180deg, #f5e8d0 0%, #fdf6ec 50%, #f5e8d0 100%);
+    linear-gradient(180deg, #f7f7f5 0%, #ffffff 50%, #f7f7f5 100%);
   --theme-footer-bg:
     radial-gradient(
       ellipse at 50% 40%,
-      rgba(142, 56, 85, 0.05) 0%,
+      rgba(0, 106, 78, 0.03) 0%,
       transparent 45%
     ),
-    linear-gradient(180deg, #f5e8d0, #f0e2c8);
-  --theme-card-bg: linear-gradient(155deg, #ffffff 0%, #fffdf8 100%);
-  --theme-photo-bg: linear-gradient(145deg, #ffffff, #fdf6ec);
+    linear-gradient(180deg, #f7f7f5, #f2f2f0);
+  --theme-card-bg: linear-gradient(155deg, #ffffff 0%, #fafaf8 100%);
+  --theme-photo-bg: linear-gradient(145deg, #ffffff, #f8f8f6);
   --theme-card-shadow:
-    0 2px 12px rgba(100, 70, 20, 0.1), 0 8px 35px rgba(100, 70, 20, 0.06),
+    0 2px 12px rgba(0, 60, 40, 0.08), 0 8px 35px rgba(0, 60, 40, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  --theme-separator-bg: #fdf6ec;
+  --theme-separator-bg: #ffffff;
 }
 
 /* ── Body ── */
 html.light body {
+  background-color: #ffffff;
   background-image:
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(212, 175, 55, 0.08) 0%,
+      rgba(0, 106, 78, 0.04) 0%,
       transparent 35%
     ),
     radial-gradient(
       ellipse at 15% 60%,
-      rgba(142, 56, 85, 0.04) 0%,
+      rgba(0, 106, 78, 0.02) 0%,
       transparent 35%
     ),
     radial-gradient(
       ellipse at 85% 70%,
-      rgba(142, 56, 85, 0.04) 0%,
+      rgba(0, 106, 78, 0.02) 0%,
       transparent 35%
     );
 }
 
-/* ── Gold shimmer — deep antique gold with strong presence ── */
+/* ── Gold shimmer — bottle green gradient for light mode ── */
 html.light .gold-shimmer {
   background: linear-gradient(
     105deg,
-    #3d2e0a 0%,
-    #5c4810 10%,
-    #7a6018 22%,
-    #a08425 38%,
-    #b8962e 50%,
-    #a08425 58%,
-    #7a6018 72%,
-    #5c4810 88%,
-    #3d2e0a 100%
+    #003d2e 0%,
+    #004d38 10%,
+    #005a42 22%,
+    #006a4e 38%,
+    #008562 50%,
+    #006a4e 58%,
+    #005a42 72%,
+    #004d38 88%,
+    #003d2e 100%
   );
   background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 1px 3px rgba(100, 70, 20, 0.25))
-    drop-shadow(0 0 15px rgba(212, 175, 55, 0.12));
+  filter: drop-shadow(0 1px 3px rgba(0, 80, 55, 0.2))
+    drop-shadow(0 0 15px rgba(0, 106, 78, 0.08));
 }
 
 /* ── Rose-gold shimmer ── */
@@ -1228,35 +1229,35 @@ html.light .event-card::after {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(212, 175, 55, 0.08),
-    rgba(255, 248, 220, 0.12),
-    rgba(212, 175, 55, 0.08),
+    rgba(0, 106, 78, 0.04),
+    rgba(0, 106, 78, 0.06),
+    rgba(0, 106, 78, 0.04),
     transparent
   );
 }
 html.light .event-card:hover {
   box-shadow:
-    0 8px 30px rgba(100, 70, 20, 0.14),
-    0 25px 60px rgba(100, 70, 20, 0.08),
+    0 8px 30px rgba(0, 60, 40, 0.1),
+    0 25px 60px rgba(0, 60, 40, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    inset 0 0 0 0.5px rgba(212, 175, 55, 0.2);
-  border-color: rgba(180, 145, 40, 0.38);
+    inset 0 0 0 0.5px rgba(0, 106, 78, 0.12);
+  border-color: rgba(0, 106, 78, 0.28);
 }
 
-/* ── Countdown box — white with gold accent ── */
+/* ── Countdown box — white with green accent ── */
 html.light .countdown-box {
   background: linear-gradient(
     165deg,
     #ffffff 0%,
-    #fffcf5 50%,
-    rgba(212, 175, 55, 0.06) 100%
+    #fcfcfc 50%,
+    rgba(0, 106, 78, 0.03) 100%
   );
-  border-color: rgba(180, 145, 40, 0.3);
+  border-color: rgba(0, 106, 78, 0.2);
   box-shadow:
-    0 4px 18px rgba(100, 70, 20, 0.08),
-    0 10px 30px rgba(100, 70, 20, 0.04),
+    0 4px 18px rgba(0, 60, 40, 0.06),
+    0 10px 30px rgba(0, 60, 40, 0.03),
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    inset 0 -1px 0 rgba(212, 175, 55, 0.08);
+    inset 0 -1px 0 rgba(0, 106, 78, 0.04);
 }
 
 /* ── Info row — clean white card ── */
@@ -1264,18 +1265,18 @@ html.light .info-row {
   background: linear-gradient(
     135deg,
     #ffffff 0%,
-    rgba(253, 246, 236, 0.8) 100%
+    rgba(245, 245, 243, 0.8) 100%
   );
-  border: 1px solid rgba(180, 145, 40, 0.18);
+  border: 1px solid rgba(0, 106, 78, 0.12);
 }
 html.light .info-row:hover {
-  border-color: rgba(180, 145, 40, 0.35);
+  border-color: rgba(0, 106, 78, 0.25);
   background: linear-gradient(
     135deg,
     #ffffff 0%,
-    rgba(253, 246, 236, 0.95) 100%
+    rgba(245, 245, 243, 0.95) 100%
   );
-  box-shadow: 0 4px 18px rgba(100, 70, 20, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 60, 40, 0.06);
 }
 
 /* ── Glass / glass-card ── */
@@ -1291,90 +1292,88 @@ html.light .glass-card {
     0 1px 0 rgba(255, 255, 255, 0.9) inset;
 }
 
-/* ── Premium button — antique gold with depth ── */
+/* ── Premium button — bottle green accent ── */
 html.light .btn-premium {
-  color: #5c4810;
+  color: #006a4e;
   background: linear-gradient(
     135deg,
-    rgba(212, 175, 55, 0.14),
+    rgba(0, 106, 78, 0.06),
     #ffffff,
-    rgba(212, 175, 55, 0.1)
+    rgba(0, 106, 78, 0.04)
   );
-  border: 1px solid rgba(180, 145, 40, 0.35);
+  border: 1px solid rgba(0, 106, 78, 0.3);
   box-shadow:
-    0 4px 15px rgba(100, 70, 20, 0.08),
+    0 4px 15px rgba(0, 60, 40, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 html.light .btn-premium:hover {
-  border-color: rgba(180, 145, 40, 0.5);
-  color: #3d2e0a;
+  border-color: rgba(0, 106, 78, 0.45);
+  color: #004d38;
   box-shadow:
-    0 8px 25px rgba(100, 70, 20, 0.12),
-    0 0 0 1px rgba(212, 175, 55, 0.12);
+    0 8px 25px rgba(0, 60, 40, 0.1),
+    0 0 0 1px rgba(0, 106, 78, 0.08);
   background: linear-gradient(
     135deg,
-    rgba(212, 175, 55, 0.2),
+    rgba(0, 106, 78, 0.1),
     #ffffff,
-    rgba(212, 175, 55, 0.15)
+    rgba(0, 106, 78, 0.06)
   );
 }
 
-/* ── Family card — white with warm border ── */
+/* ── Family card — white with green border ── */
 html.light .family-card {
   box-shadow:
-    0 4px 18px rgba(100, 70, 20, 0.08),
-    0 10px 35px rgba(100, 70, 20, 0.04);
+    0 4px 18px rgba(0, 60, 40, 0.06),
+    0 10px 35px rgba(0, 60, 40, 0.03);
+  border: 1px solid rgba(0, 106, 78, 0.18);
 }
 html.light .family-card::before {
   display: none;
 }
-html.light .family-card {
-  border: 1px solid rgba(180, 145, 40, 0.25);
-}
 html.light .family-card:hover {
   box-shadow:
-    0 12px 35px rgba(100, 70, 20, 0.1),
-    0 0 40px rgba(212, 175, 55, 0.04);
+    0 12px 35px rgba(0, 60, 40, 0.08),
+    0 0 40px rgba(0, 106, 78, 0.03);
 }
 
-/* ── Photo frame — rich gold ring on white ── */
+/* ── Photo frame — green ring on white ── */
 html.light .photo-frame-gold::before {
   background: conic-gradient(
     from 45deg,
-    rgba(160, 130, 35, 0.8),
-    rgba(212, 175, 55, 1),
-    rgba(142, 56, 85, 0.35),
-    rgba(212, 175, 55, 1),
-    rgba(160, 130, 35, 0.8)
+    rgba(0, 80, 55, 0.7),
+    rgba(0, 106, 78, 0.9),
+    rgba(138, 46, 72, 0.25),
+    rgba(0, 106, 78, 0.9),
+    rgba(0, 80, 55, 0.7)
   );
 }
 html.light .photo-frame-gold::after {
-  border-color: rgba(180, 145, 40, 0.25);
+  border-color: rgba(0, 106, 78, 0.2);
   box-shadow:
-    0 0 25px rgba(212, 175, 55, 0.12),
-    0 0 50px rgba(142, 56, 85, 0.06);
+    0 0 25px rgba(0, 106, 78, 0.1),
+    0 0 50px rgba(138, 46, 72, 0.04);
 }
 
 /* ── Glow pulse ── */
 html.light .glow-pulse {
   box-shadow:
-    0 0 18px rgba(212, 175, 55, 0.18),
-    0 0 5px rgba(142, 56, 85, 0.1);
+    0 0 18px rgba(0, 106, 78, 0.12),
+    0 0 5px rgba(138, 46, 72, 0.06);
 }
 
-/* ── Glow line separator — bold & elegant ── */
+/* ── Glow line separator — bottle green ── */
 html.light .glow-line {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(180, 145, 40, 0.5),
-    rgba(142, 56, 85, 0.3),
-    rgba(180, 145, 40, 0.5),
+    rgba(0, 106, 78, 0.35),
+    rgba(138, 46, 72, 0.2),
+    rgba(0, 106, 78, 0.35),
     transparent
   );
   box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.15),
-    0 0 25px rgba(142, 56, 85, 0.08);
+    0 0 12px rgba(0, 106, 78, 0.1),
+    0 0 25px rgba(138, 46, 72, 0.05);
 }
 
 /* ── Line gold ── */
@@ -1382,22 +1381,22 @@ html.light .line-gold {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(160, 130, 35, 0.35),
+    rgba(0, 106, 78, 0.25),
     transparent
   );
 }
 
-/* ── Section ornate overlay — visible warmth ── */
+/* ── Section ornate overlay ── */
 html.light .section-ornate::before {
   background:
     radial-gradient(
       ellipse at 15% 0%,
-      rgba(212, 175, 55, 0.05) 0%,
+      rgba(0, 106, 78, 0.03) 0%,
       transparent 50%
     ),
     radial-gradient(
       ellipse at 85% 100%,
-      rgba(142, 56, 85, 0.04) 0%,
+      rgba(0, 106, 78, 0.02) 0%,
       transparent 50%
     );
 }
@@ -1406,24 +1405,24 @@ html.light .section-ornate::before {
 html.light .gold-border-gradient::before {
   background: linear-gradient(
     135deg,
-    rgba(180, 145, 40, 0.4),
-    rgba(142, 56, 85, 0.1),
-    rgba(180, 145, 40, 0.4)
+    rgba(0, 106, 78, 0.3),
+    rgba(138, 46, 72, 0.08),
+    rgba(0, 106, 78, 0.3)
   );
 }
 
 /* ── Scrollbar ── */
 html.light ::-webkit-scrollbar-track {
-  background: #f5e8d0;
+  background: #f2f2f2;
 }
 html.light ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #a08425, #8a6b15);
+  background: linear-gradient(to bottom, #008562, #006a4e);
 }
 
 /* ── Selection ── */
 html.light ::selection {
-  background: rgba(212, 175, 55, 0.25);
-  color: #2c1810;
+  background: rgba(0, 106, 78, 0.18);
+  color: #006a4e;
 }
 
 /* ── Romantic separator ── */
@@ -1431,65 +1430,65 @@ html.light .romantic-separator {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(142, 56, 85, 0.28),
-    rgba(180, 145, 40, 0.35),
-    rgba(142, 56, 85, 0.28),
+    rgba(138, 46, 72, 0.22),
+    rgba(0, 106, 78, 0.25),
+    rgba(138, 46, 72, 0.22),
     transparent
   );
 }
 html.light .romantic-separator::after {
-  color: rgba(142, 56, 85, 0.5);
+  color: rgba(138, 46, 72, 0.5);
   background: var(--theme-separator-bg);
 }
 
-/* ── Countdown pulse — warm light animation ── */
+/* ── Countdown pulse — green light animation ── */
 @keyframes countdownPulseLight {
   0% {
     box-shadow:
-      0 4px 18px rgba(100, 70, 20, 0.06),
-      inset 0 1px 0 rgba(212, 175, 55, 0.15);
+      0 4px 18px rgba(0, 60, 40, 0.04),
+      inset 0 1px 0 rgba(0, 106, 78, 0.1);
   }
   100% {
     box-shadow:
-      0 4px 18px rgba(100, 70, 20, 0.06),
-      inset 0 1px 0 rgba(212, 175, 55, 0.25),
-      0 0 25px rgba(212, 175, 55, 0.05);
+      0 4px 18px rgba(0, 60, 40, 0.04),
+      inset 0 1px 0 rgba(0, 106, 78, 0.18),
+      0 0 25px rgba(0, 106, 78, 0.03);
   }
 }
 html.light .countdown-box {
   animation-name: countdownPulseLight;
 }
 
-/* ── Glow pulse — warm light animation ── */
+/* ── Glow pulse — green light animation ── */
 @keyframes glowPulseLight {
   0%,
   100% {
     box-shadow:
-      0 0 18px rgba(212, 175, 55, 0.18),
-      0 0 5px rgba(142, 56, 85, 0.1);
+      0 0 18px rgba(0, 106, 78, 0.12),
+      0 0 5px rgba(138, 46, 72, 0.06);
   }
   50% {
     box-shadow:
-      0 0 30px rgba(212, 175, 55, 0.28),
-      0 0 50px rgba(142, 56, 85, 0.1),
-      0 0 10px rgba(212, 175, 55, 0.12);
+      0 0 30px rgba(0, 106, 78, 0.18),
+      0 0 50px rgba(138, 46, 72, 0.06),
+      0 0 10px rgba(0, 106, 78, 0.08);
   }
 }
 html.light .glow-pulse {
   animation-name: glowPulseLight;
 }
 
-/* ── Romantic glow — warm light ── */
+/* ── Romantic glow — green light ── */
 @keyframes romanticGlowLight {
   0% {
     box-shadow:
-      0 0 15px rgba(142, 56, 85, 0.12),
-      0 0 30px rgba(212, 175, 55, 0.08);
+      0 0 15px rgba(138, 46, 72, 0.08),
+      0 0 30px rgba(0, 106, 78, 0.05);
   }
   100% {
     box-shadow:
-      0 0 30px rgba(142, 56, 85, 0.18),
-      0 0 50px rgba(212, 175, 55, 0.1);
+      0 0 30px rgba(138, 46, 72, 0.12),
+      0 0 50px rgba(0, 106, 78, 0.06);
   }
 }
 html.light .romantic-glow {
@@ -1502,44 +1501,44 @@ html.light .romantic-glow {
    on light backgrounds. Override them here.
    ══════════════════════════════════════════════════════ */
 
-/* ── Cream text (body text, dates, names) ── */
+/* ── Cream text → bottle green in light mode ── */
 html.light .text-cream\/30 {
-  color: rgba(44, 24, 16, 0.6) !important;
+  color: rgba(0, 106, 78, 0.55) !important;
 }
 html.light .text-cream\/35 {
-  color: rgba(44, 24, 16, 0.65) !important;
+  color: rgba(0, 106, 78, 0.6) !important;
 }
 html.light .text-cream\/45 {
-  color: rgba(44, 24, 16, 0.75) !important;
+  color: rgba(0, 106, 78, 0.72) !important;
 }
 html.light .text-cream\/65 {
-  color: rgba(44, 24, 16, 0.9) !important;
+  color: rgba(0, 106, 78, 0.88) !important;
 }
 html.light .text-cream\/80 {
-  color: rgba(44, 24, 16, 0.95) !important;
+  color: rgba(0, 106, 78, 0.95) !important;
 }
 
-/* ── Gold text (Telugu text, labels, icons) ── */
+/* ── Gold text → bottle green in light mode ── */
 html.light .text-gold\/30 {
-  color: rgba(138, 107, 21, 0.62) !important;
+  color: rgba(0, 106, 78, 0.55) !important;
 }
 html.light .text-gold\/40 {
-  color: rgba(138, 107, 21, 0.72) !important;
+  color: rgba(0, 106, 78, 0.65) !important;
 }
 html.light .text-gold\/50 {
-  color: rgba(138, 107, 21, 0.82) !important;
+  color: rgba(0, 106, 78, 0.75) !important;
 }
 html.light .text-gold\/55 {
-  color: rgba(138, 107, 21, 0.85) !important;
+  color: rgba(0, 106, 78, 0.8) !important;
 }
 html.light .text-gold\/60 {
-  color: rgba(138, 107, 21, 0.9) !important;
+  color: rgba(0, 106, 78, 0.85) !important;
 }
 html.light .text-gold\/65 {
-  color: rgba(138, 107, 21, 0.92) !important;
+  color: rgba(0, 106, 78, 0.9) !important;
 }
 html.light .text-gold\/70 {
-  color: rgba(138, 107, 21, 0.94) !important;
+  color: rgba(0, 106, 78, 0.94) !important;
 }
 
 /* ── Rose-gold text (subtitles, hearts, accents) ── */
@@ -1573,15 +1572,15 @@ html.light .text-rose-gold\/80 {
 
 /* ── Background opacity boosts ── */
 html.light .bg-dark-bg\/95 {
-  background-color: rgba(253, 246, 236, 0.97) !important;
+  background-color: rgba(255, 255, 255, 0.97) !important;
 }
 
 /* ── Border opacity boosts ── */
 html.light .border-gold\/\[0\.08\] {
-  border-color: rgba(138, 107, 21, 0.2) !important;
+  border-color: rgba(0, 106, 78, 0.15) !important;
 }
 html.light .border-gold\/\[0\.12\] {
-  border-color: rgba(138, 107, 21, 0.25) !important;
+  border-color: rgba(0, 106, 78, 0.2) !important;
 }
 
 /* ── Gradient line opacity boosts (decorative dividers) ── */
@@ -1596,53 +1595,53 @@ html.light .via-rose-gold\/30 {
 html.light .info-row > div:first-child {
   background: linear-gradient(
     135deg,
-    rgba(138, 107, 21, 0.12),
-    rgba(138, 46, 72, 0.06)
+    rgba(0, 106, 78, 0.08),
+    rgba(138, 46, 72, 0.04)
   ) !important;
 }
 
-/* ── Emoji tile in event card — warmer, visible bg ── */
+/* ── Emoji tile in event card — green tinted bg ── */
 html.light .event-card .rounded-2xl {
   background: linear-gradient(
     145deg,
-    rgba(138, 107, 21, 0.1),
-    rgba(138, 46, 72, 0.04),
-    rgba(138, 107, 21, 0.03)
+    rgba(0, 106, 78, 0.06),
+    rgba(138, 46, 72, 0.03),
+    rgba(0, 106, 78, 0.02)
   ) !important;
   box-shadow:
-    0 4px 18px rgba(100, 70, 20, 0.06),
+    0 4px 18px rgba(0, 60, 40, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
 }
 
 /* ── Countdown label & unit text boosts ── */
 html.light .countdown-box span.text-cream\/30 {
-  color: rgba(44, 24, 16, 0.65) !important;
+  color: rgba(0, 106, 78, 0.6) !important;
 }
 
 /* ── Footer "made with" text ── */
 html.light footer .text-cream\/35 {
-  color: rgba(44, 24, 16, 0.6) !important;
+  color: rgba(0, 106, 78, 0.55) !important;
 }
 
 /* ── Badge pill in hero — visible border & bg ── */
 html.light .rounded-full[style*="border: 1px solid rgba(212,175,55,0.12)"] {
-  border-color: rgba(138, 107, 21, 0.25) !important;
+  border-color: rgba(0, 106, 78, 0.2) !important;
   background: linear-gradient(
     135deg,
-    rgba(138, 107, 21, 0.06),
-    rgba(138, 46, 72, 0.04)
+    rgba(0, 106, 78, 0.04),
+    rgba(138, 46, 72, 0.03)
   ) !important;
 }
 
-/* ── Top/bottom accent lines in event card — stronger for light ── */
+/* ── Top/bottom accent lines in event card — bottle green ── */
 html.light .event-card > .h-\[2px\] {
   background: linear-gradient(
     to right,
     transparent 5%,
-    rgba(138, 46, 72, 0.3) 20%,
-    rgba(138, 107, 21, 0.55) 50%,
-    rgba(138, 46, 72, 0.3) 80%,
+    rgba(138, 46, 72, 0.22) 20%,
+    rgba(0, 106, 78, 0.4) 50%,
+    rgba(138, 46, 72, 0.22) 80%,
     transparent 95%
   ) !important;
-  box-shadow: 0 0 8px rgba(138, 107, 21, 0.1) !important;
+  box-shadow: 0 0 8px rgba(0, 106, 78, 0.08) !important;
 }

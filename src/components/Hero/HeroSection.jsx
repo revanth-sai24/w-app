@@ -388,9 +388,9 @@ export default function HeroSection() {
           <p className="font-script text-lg sm:text-xl text-rose-gold/80 italic">
             at the celebration of our love
           </p>
-          <p className="telugu text-gold/55 text-xs sm:text-sm leading-relaxed">
+          {/* <p className="telugu text-gold/55 text-xs sm:text-sm leading-relaxed">
             మా ప్రేమ పెళ్ళికి మీకు హృదయపూర్వక ఆహ్వానం
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Ornament divider */}
