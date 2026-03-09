@@ -17,8 +17,7 @@ export default function EventsSection() {
       ref={ref}
       className="relative py-28 sm:py-36 overflow-hidden section-ornate"
       style={{
-        background:
-          "linear-gradient(180deg, #06040A 0%, #0C0812 50%, #06040A 100%)",
+        background: "var(--theme-events-bg)",
         paddingLeft: "20px",
         paddingRight: "20px",
       }}

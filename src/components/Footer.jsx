@@ -37,7 +37,7 @@ export default function Footer() {
     <footer
       ref={ref}
       className="relative py-24 sm:py-32 overflow-hidden px-4 sm:px-6"
-      style={{ background: "linear-gradient(180deg, #06040A, #040208)" }}
+      style={{ background: "var(--theme-footer-bg)" }}
     >
       {/* Glowing section separator at top */}
       <div

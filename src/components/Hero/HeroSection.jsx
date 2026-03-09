@@ -40,12 +40,7 @@ export default function HeroSection() {
     <section
       id="home"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6"
-      style={{
-        background: `
-          radial-gradient(ellipse at 50% 25%, rgba(24,18,24,1) 0%, rgba(6,4,10,1) 65%),
-          linear-gradient(180deg, #06040A 0%, #100C12 50%, #06040A 100%)
-        `,
-      }}
+      style={{ background: "var(--theme-hero-bg)" }}
     >
       {/* ══ Deep ambient glow layers — simplified on mobile ══ */}
       {!isMobile && (
@@ -258,9 +253,7 @@ export default function HeroSection() {
           <div className="relative group">
             <div
               className="photo-frame-gold w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden flex items-center justify-center glow-pulse"
-              style={{
-                background: "linear-gradient(145deg, #181218, #06040A)",
-              }}
+              style={{ background: "var(--theme-photo-bg)" }}
             >
               {couple.bride.photo ? (
                 <img
@@ -313,9 +306,7 @@ export default function HeroSection() {
           <div className="relative group">
             <div
               className="photo-frame-gold w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden flex items-center justify-center glow-pulse"
-              style={{
-                background: "linear-gradient(145deg, #181218, #06040A)",
-              }}
+              style={{ background: "var(--theme-photo-bg)" }}
             >
               {couple.groom.photo ? (
                 <img
@@ -439,10 +430,8 @@ export default function HeroSection() {
               key={side.label}
               className="family-card relative p-5 sm:p-8 text-center rounded-2xl overflow-hidden group"
               style={{
-                background:
-                  "linear-gradient(155deg, rgba(24,18,24,0.8), rgba(10,7,12,0.95))",
-                boxShadow:
-                  "0 4px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(212,175,55,0.07), 0 0 70px rgba(142,56,85,0.015)",
+                background: "var(--theme-card-bg)",
+                boxShadow: "var(--theme-card-shadow)",
                 paddingBottom: "15px",
               }}
             >

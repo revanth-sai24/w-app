@@ -6,6 +6,7 @@ import FloatingPetals from "./components/Decorations/FloatingPetals";
 import GoldParticles from "./components/Decorations/GoldParticles";
 import CurtainReveal from "./components/CurtainReveal";
 import StageCurtains from "./components/StageCurtains";
+import ThemeToggle from "./components/ThemeToggle";
 
 /* Detect if the device is likely a mobile/low-power device */
 const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
@@ -44,6 +45,7 @@ function App() {
         <EventsSection />
       </main>
       <Footer />
+      <ThemeToggle />
     </div>
   );
 }
